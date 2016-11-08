@@ -1,7 +1,3 @@
-/**
- * Created by taylo on 10/31/2016.
- */
-
 var input_array = [5,3,2,5,1]; // original array
 
 function randomize_list(arr) {
@@ -20,11 +16,10 @@ function randomize_list(arr) {
 ////////////////////////////////////////
 
 function randomize_array(arr) {
-    var random_index = Math.floor(Math.random() * arr.length);
+    var random_index = Math.floor(Math.random() * (arr.length -1));
     var random_value = arr[random_index];
+    var new_arr = arr.splice(random_value,1);
     console.log(random_value);
-    arr.splice(random_index,1);
-    arr.splice(random_index,0,random_value);
     return arr;
 }
 
