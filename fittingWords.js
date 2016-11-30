@@ -10,6 +10,26 @@
  Example:
  var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
  fittingWords('cat', myArray);
- Output - ['cat','caterpillar','accurate','cactus']
+ Output - ['cat','caterpillar','accurate','cactus'] ********* cat shouldn't be included in this example per the instructions
  */
 
+
+function fitWords (string,arrStrings) {
+    var arr = [];
+    var count = 0;
+    for (var i=0; i<arrStrings.length; i++) {
+        var wordInArray = arrStrings[i];
+        for (var j=0; j<string.length; j++) {
+            if (wordInArray.includes(string[j]) == true) {
+                count++;
+            }
+            if (count == string.length && wordInArray.length > string.length) {
+                console.log(wordInArray);
+            }
+        }
+        count = 0;
+    }
+}
+
+var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
+fitWords('cat', myArray);
