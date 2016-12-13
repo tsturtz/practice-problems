@@ -61,7 +61,13 @@
  */
 
 function math_sequences(num1,num2) {
-
+    var outputArr = [];
+    var add = num1 + '+' + num2 + '=' + num1 + num2;
+    var sub = num1 + '-' + num2 + '=' + (num1 - num2);
+    var mult = num1 + '*' + num2 + '=' + num1 * num2;
+    var div = num1 + '/' + num2 + '=' + num1 / num2;
+    outputArr.push(add, sub, mult, div);
+    console.log(outputArr);
 }
 
 math_sequences(2,5);
